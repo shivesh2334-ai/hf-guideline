@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-paper font-sans text-ink antialiased; }
+h1, h2, h3 { @apply font-serif; }
+.card { @apply rounded-xl border border-line bg-card shadow-sm; }
+.chip { @apply inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-ink transition hover:border-heart hover:text-heart; }
+.chip-on { @apply border-heart bg-heart text-white hover:text-white; }
+.input { @apply w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none focus:border-heart focus:ring-2 focus:ring-heart/20; }
+.prose-hf p { @apply mb-3 text-[15px] leading-7; }
