@@ -42,8 +42,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-4">
+      <section className="grid gap-4 md:grid-cols-5">
         {[
+          ["/assessment", "Patient assessment", "Enter stage, HF type and comorbidities for medicines, timing and monitoring"],
           ["/queries", "Recommendation queries", `${recs.length} recommendations phrased as questions, filterable by class, level and topic`],
           ["/drugs", "Drug information", "Doses, evidence, cautions and linked recommendations for every drug class"],
           ["/explorer", "Guideline explorer", "All chapters 1–14 with page text and source-PDF links"],

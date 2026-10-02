@@ -9,8 +9,7 @@ export const dynamicParams = false;
 export function generateStaticParams() { return sections.map((s) => ({ id: secSlug(s.id) })); }
 
 export default async function SectionPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id: slug } = await params;
-  const id = secFromSlug(slug);
+  const id = secFromSlug((await params).id);
   const i = sections.findIndex((s) => s.id === id);
   if (i < 0) notFound();
   const s = sections[i];

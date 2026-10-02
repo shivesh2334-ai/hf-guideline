@@ -1,5 +1,6 @@
 import Link from "next/link";
 const links = [
+  ["/assessment", "Assessment"],
   ["/queries", "Recommendations"],
   ["/drugs", "Drugs"],
   ["/explorer", "Guideline"],

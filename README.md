@@ -1,12 +1,13 @@
 # HF Guideline Navigator — 2026 ESC Heart Failure Guidelines
 
-Next.js 14 · TypeScript · Tailwind · Vercel (Mumbai `bom1`)
+Next.js 15 · TypeScript · Tailwind · Vercel (Mumbai `bom1`)
 
 Knowledge base: `public/ehag100.pdf` (2026 ESC Guidelines for the management of heart failure, 112 pp).
 
 ## What's inside
 | Route | Purpose |
 |---|---|
+| `/assessment` | Patient assessment: enter stage, LVEF/HF type, NYHA, rhythm, labs, current drugs and comorbidities → medicines (with Table 11 doses), timing, monitoring, devices/procedures, drugs to avoid; every item cites its recommendation (class/level, PDF page). Rules live in `lib/assess.ts` |
 | `/queries` | All 125 graded recommendations as questions; filter by class, level, topic; expandable answers with PDF page links |
 | `/drugs` | 33 drug entries (ACE-I, ARNI, ARB, beta-blockers, MRAs, SGLT2-I, diuretics, ivabradine, vericiguat, H-ISDN, digoxin/digitoxin, IV iron, GLP-1/GIP, anticoagulants, acute agents, TTR therapy, drugs to avoid) + Table 11 dose table |
 | `/explorer` | Every chapter/section (1–14) with page text, linked recommendations, prev/next |
