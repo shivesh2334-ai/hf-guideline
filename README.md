@@ -1,6 +1,6 @@
 # HF Guideline Navigator — 2026 ESC Heart Failure Guidelines
 
-Next.js 14 · TypeScript · Tailwind · Vercel (Mumbai `bom1`)
+Next.js 15 · TypeScript · Tailwind · Vercel (Mumbai `bom1`)
 
 Knowledge base: `public/ehag100.pdf` (2026 ESC Guidelines for the management of heart failure, 112 pp).
 
@@ -14,10 +14,9 @@ Knowledge base: `public/ehag100.pdf` (2026 ESC Guidelines for the management of 
 | `/ask` | Vector search (TF-IDF, cosine) across ~400 guideline passages + recommendations + drug cards; optional AI synthesis |
 | `/reference` | Definition, LVEF phenotypes, NYHA, NT-proBNP thresholds, classes/levels |
 
-## Deploy (GitHub web UI + Vercel)
-1. Create a new empty GitHub repo, then **Add file → Upload files** and drag in the contents of this folder (keep the folder structure; `public/ehag100.pdf` is ~6 MB, within the 25 MB web-upload limit).
-2. In Vercel: **Add New → Project → Import** the repo. Framework is auto-detected (Next.js); `vercel.json` pins region `bom1`.
-3. Optional: add env vars `ANTHROPIC_API_KEY` (and `ANTHROPIC_MODEL`) to enable the "Synthesize answer" button. Everything else works without it.
+## Deploy (Vercel)
+1. In Vercel: **Add New → Project → Import** this repo. Framework is auto-detected (Next.js); `vercel.json` pins region `bom1`. The app lives at the repo root, so no "Root Directory" override is needed.
+2. Optional: add env vars `ANTHROPIC_API_KEY` (and `ANTHROPIC_MODEL`) to enable the "Synthesize answer" button. Everything else works without it.
 
 ## Local
 ```bash
